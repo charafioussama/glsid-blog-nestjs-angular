@@ -58,18 +58,24 @@ This web app provides a very simple platform to simplify any blog management.
 ## Screenshot
 ### Login page
 ![Alt text](https://i.ibb.co/k5SM0fn/1.jpg)
+
 ### Contact page
 ![Alt text](https://i.ibb.co/Vw8rFgS/2.jpg)
+
 ### Dashboard
 ![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
+
 ### Users page
 ![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
+
 ![Alt text](https://i.ibb.co/t4VHcQg/4.jpg)
+
 ![Alt text](https://i.ibb.co/4T0z7d7/5.jpg)
+
 ![Alt text](https://i.ibb.co/0qtFfzq/6.jpg)
+
 ### Posts page
 ![Alt text](https://i.ibb.co/CJSYGGD/7.jpg)
-
 
 
 ## Notice
