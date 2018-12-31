@@ -1,0 +1,116 @@
+<div class="container">
+  <div class="table-wrapper">
+  <div class="table-title">
+        <div class="row">
+          <div class="col-sm-5">
+      <h2>User <b>Management</b></h2>
+    </div>
+    <div class="col-sm-7">
+      <a class="btn btn-primary"><i class="material-icons" data-toggle="modal" data-target="#addUserModal">&#xE147;</i> <span>Add New User</span></a>
+    </div>
+          </div>
+      </div>
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="tbl" class="table table-hover table-bordered" style="width:100%">
+    <thead>
+    <tr>
+      <th># </th>
+      <th>IMAGE </th>
+      <th>NAME </th>
+      <th>EMAIL </th>
+      <th>Action </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id}}</td>
+      <td><img src="{{ user.image}}" class="avatar" alt="Avatar" /></td>
+      <td>{{ user.name}}</td>
+      <td>{{ user.email}}</td>
+      <td>
+        <a href="#" class="update" title="update" data-toggle="modal" (click)="updateCpy(user)" ><i class="material-icons">update</i></a>
+        <a href="#" class="delete" title="Delete" data-toggle="modal" (click)="deleteCpy(user.id)"><i class="material-icons">delete</i></a>
+      </td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+
+  <hr>
+</div>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" role="dialog" id="delModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete User</h5>
+        <button type="button" class="close" (click)="hideDel()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you Sure to delete this user!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"  (click)="deleteRow()">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="hideDel()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+        <button type="button" class="close" (click)="hideUp()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="updateForm" (ngSubmit)="onSubmitUp()">
+
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label>Nom</label>
+            <input type="text" name="name" class="form-control" formControlName="n">
+          </div>
+          <div class="alert alert-danger"
+               *ngIf="updateForm.controls['n'].touched && updateForm.controls['n'].invalid">
+            <div *ngIf="updateForm.controls['n'].errors.required" >Champs requis</div>
+            <div *ngIf="updateForm.controls['n'].errors.minlength" >Minimum 6 caratères</div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" formControlName="e">
+          </div>
+
+          <div class="alert alert-danger"
+               *ngIf="updateForm.controls['e'].touched && updateForm.controls['e'].invalid">
+            <div *ngIf="updateForm.controls['e'].errors.required" >Champs requis</div>
+            <div *ngIf="updateForm.controls['e'].errors.minlength" >Minimum 6 caratères</div>
+            <div *ngIf="updateForm.controls['e'].errors.email" >Email form</div>
+          </div>
+          <div class="form-group">
+            <label>Image</label>
+            <input type="file" style="display: none;" name="photo" id="myFileInput" formControlName="i">
+            <input type="button" class="form-control" onclick="document.getElementById('myFileInput').click()"
+                   value="Choisir un fichier"/>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="hideUp()">Close</button>
+          <button type="submit" class="btn btn-primary" [disabled]="updateForm.invalid">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

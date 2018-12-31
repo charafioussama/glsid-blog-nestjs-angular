@@ -1,0 +1,51 @@
+<!-- Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+        <button type="button" class="close" (click)="hideadd()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" name="name" class="form-control" formControlName="n">
+        </div>
+          <div class="alert alert-danger"
+               *ngIf="addUserForm.controls['n'].touched && addUserForm.controls['n'].invalid">
+            <div *ngIf="addUserForm.controls['n'].errors.required" >Champs requis</div>
+            <div *ngIf="addUserForm.controls['n'].errors.minlength" >Minimum 6 caratères</div>
+          </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" class="form-control" formControlName="e">
+        </div>
+
+          <div class="alert alert-danger"
+               *ngIf="addUserForm.controls['e'].touched && addUserForm.controls['e'].invalid">
+            <div *ngIf="addUserForm.controls['e'].errors.required" >Champs requis</div>
+            <div *ngIf="addUserForm.controls['e'].errors.minlength" >Minimum 6 caratères</div>
+            <div *ngIf="addUserForm.controls['e'].errors.email" >Email form</div>
+          </div>
+        <div class="form-group">
+          <label>Image</label>
+          <input type="file" style="display: none;" name="photo" id="myFileInput" formControlName="i">
+          <input type="button" class="form-control" onclick="document.getElementById('myFileInput').click()"
+                 value="Choisir un fichier"/>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="hideadd()">Close</button>
+        <button type="submit" class="btn btn-primary" [disabled]="addUserForm.invalid" onclick="$('#addUserModal').modal('hide')">Save changes</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

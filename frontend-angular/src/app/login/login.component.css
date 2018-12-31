@@ -1,0 +1,76 @@
+.container{
+  width: 300px;
+  margin: 100px auto auto auto;
+  background: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.header{
+  text-align: center;
+  background-color: darkblue;
+  background-image: url("https://thumbs.dreamstime.com/t/material-design-background-modern-creative-horisontal-colorful-65738690.jpg");
+  background-size: cover;
+  color: white;
+  height: 90px;
+  border-radius: 5px 5px 0 0;
+}
+.header h3{
+  padding-top: 35px;
+}
+
+form{
+  margin: 40px 0 20px 0;
+}
+
+input[type="text"],input[type="password"]{
+  width: 80%;
+  box-sizing: border-box;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  border: 1px solid #CCC;
+  background: #EEE;
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+input[type="checkbox"]{
+  margin-left: 10%;
+  border: none;
+  border-radius: 2px;
+  border-style: none;
+  margin-bottom: 30px;
+}
+input[type="checkbox"] + label{
+  font-size: 11px;
+}
+
+input[type="submit"]{
+  display: block;
+  margin: auto;
+  padding: 4px 25px;
+  color: white;
+  background: #6985CA;
+  border: 1px solid #5975BA;
+  cursor: pointer;
+}
+input[type="submit"]:hover{
+  background: #5975BA;
+}
+
+.span-container span{
+  font-size: 11px;
+  color: #29458A;
+}
+.span-container span:nth-child(1){
+  float: left;
+  margin-left: 10%;
+}
+.span-container span:nth-child(2){
+  float: right;
+  margin-right: 10%;
+}
+
+.content{
+  padding-bottom: 30px;
+}

@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="table-wrapper">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2>Posts <b>Management</b></h2>
+        </div>
+        <div class="col-sm-7">
+          <a class="btn btn-primary"><i class="material-icons" data-toggle="modal" data-target="#basicExampleModal">&#xE147;</i> <span>Create Post</span></a>
+        </div>
+      </div>
+    </div>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover table-bordered" style="width:100%">
+      <thead>
+      <tr>
+        <th># </th>
+        <th>TITLE </th>
+        <th>IMAGE </th>
+        <th>STATUS </th>
+        <th>USER </th>
+        <th>CREATED_AT </th>
+        <th>Action </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.postId}}</td>
+        <td>{{ post.title}}</td>
+
+        <td><img src="{{ post.image}}" class="img-fluid" alt="Avatar"/></td>
+        <td>{{ post.body}}</td>
+        <td>{{ post.userId}}</td>
+        <td>{{ post.postedAt| date}}</td>
+        <td>
+          <a href="#" class="update" title="update" data-toggle="modal" data-target="#ModModel"><i class="material-icons">update</i></a>
+          <a href="#" class="delete" title="Delete" data-toggle="modal" data-target="#delModal"><i class="material-icons">delete</i></a>
+        </td>
+
+        <div class="modal" tabindex="-1" role="dialog" id="delModal">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Delete post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you Sure to delete this post!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="ModModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input type="text" name="name" class="form-control" value="{{ post.title}}">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" value="{{ post.body}}">
+                </div>
+
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <input type="file" style="display: none;" name="photo" id="myFileInput" required>
+                  <input type="button" class="form-control" onclick="document.getElementById('myFileInput').click()"
+                         value="Choisir un fichier"/>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </tr>
+      </tbody>
+    </table>
+
+    <hr>
+  </div>
+</div>

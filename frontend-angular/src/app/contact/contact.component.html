@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="table-wrapper">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2>Contact <b>Form</b></h2>
+        </div>
+      </div>
+    </div>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-row">
+
+    <div class="form-group col-md-6">
+      <label for="name">Name</label>
+      <input id="name"  type="text" class="form-control" formControlName="n">
+    </div>
+    <div class="alert alert-danger"
+    *ngIf="contactForm.controls['n'].touched && contactForm.controls['n'].invalid">
+      <div *ngIf="contactForm.controls['n'].errors.required" >Champs requis</div>
+      <div *ngIf="contactForm.controls['n'].errors.minlength" >Minimum 6 caratères</div>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="email">Email</label>
+      <input id="email" type="text" class="form-control" formControlName="e">
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Message</label>
+        <textarea id="message" type="text" class="form-control" formControlName="e"></textarea>
+      </div>
+    </div>
+    <button class="btn btn-outline-primary" [disabled]="contactForm.invalid">Send</button>
+
+
+  </form>
+
+
+
+
+</div>
+</div>

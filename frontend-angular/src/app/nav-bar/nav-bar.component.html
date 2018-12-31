@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light navbar-static-top sticky-top">
+  <a class="navbar-brand" href="#">
+  <img src="https://www.freeiconspng.com/uploads/blogger-logo-icon-png-1.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GLSID</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item px-2" *ngIf="_router.url != '/login' && _router.url != '/contact'">
+        <a class="nav-link" routerLink="home" >Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item px-2" *ngIf="_router.url != '/login' && _router.url != '/contact'">
+        <a class="nav-link"  routerLink="users" routerLinkActive="active">Users</a>
+      </li>
+      <li class="nav-item px-2" *ngIf="_router.url != '/login' && _router.url != '/contact'">
+        <a class="nav-link"  routerLink="posts">Posts</a>
+      </li>
+      <li class="nav-item px-2" *ngIf="_router.url == '/contact' || _router.url == '/login'"  >
+        <a class="nav-link disabled" routerLink="login">Login</a>
+      </li>
+      <li class="nav-item px-2" *ngIf="_router.url == '/contact' || _router.url == '/login'"  >
+        <a class="nav-link disabled" routerLink="contact">Contact</a>
+      </li>
+      <li class="nav-item px-2" *ngIf="_router.url != '/login' && _router.url != '/contact'">
+        <a class="nav-link disabled"  routerLink="login">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
