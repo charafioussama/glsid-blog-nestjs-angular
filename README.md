@@ -55,19 +55,20 @@ This web app provides a very simple platform to simplify any blog management.
   npm run start
 ```
 ## Screenshot
-### Dashboard
-![Alt text](https://ibb.co/MZC9p4T)
-### Users page
-![Alt text](https://ibb.co/Y0GY5ck)
-![Alt text](https://ibb.co/v1YQJM1)
-![Alt text](https://ibb.co/xmrBTTdk)
-https://ibb.co/1q41L6L
-### Posts page
-![Alt text](https://ibb.co/rf7WXBs)
 ### Login page
-![Alt text](https://ibb.co/MZC9p4T)
+![Alt text](https://i.ibb.co/k5SM0fn/1.jpg)
 ### Contact page
-![Alt text](https://ibb.co/xDx2GXW)
+![Alt text](https://i.ibb.co/Vw8rFgS/2.jpg)
+### Dashboard
+![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
+### Users page
+![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
+![Alt text](https://i.ibb.co/pr0mkHy/4.jpg)
+![Alt text](https://i.ibb.co/pr0mkHy/5.jpg)
+![Alt text](https://i.ibb.co/pr0mkHy/6.jpg)
+### Posts page
+![Alt text](https://i.ibb.co/pr0mkHy/7.jpg)
+
 
 
 ## Notice
