@@ -66,8 +66,6 @@ This web app provides a very simple platform to simplify any blog management.
 ![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
 
 ### Users page
-![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
-
 ![Alt text](https://i.ibb.co/t4VHcQg/4.jpg)
 
 ![Alt text](https://i.ibb.co/4T0z7d7/5.jpg)
