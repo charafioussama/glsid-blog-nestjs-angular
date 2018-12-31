@@ -1,11 +1,11 @@
 # glsid blog with nestjs-angular7
 
 Developed by CHARAFI Oussama 
+Engineer student
+Software Engineering & Distributed Computing Systems.
+ENSET Mohammedia .
 
-GLSID2
-ENSETM
-
-## Built With
+## Builts With
 
 * [nestJs](https://nestjs.com/) - Backend
 * [Angular 7](https://angular.io/) - Frontend
@@ -21,7 +21,7 @@ ENSETM
 This web app provides a very simple platform to simplify any blog management.
 
 
-## Installing the project
+## Installing project
 
 ### Frontend folder
 
@@ -54,6 +54,7 @@ This web app provides a very simple platform to simplify any blog management.
 ```
   npm run start
 ```
+
 ## Screenshot
 ### Login page
 ![Alt text](https://i.ibb.co/k5SM0fn/1.jpg)
@@ -63,13 +64,15 @@ This web app provides a very simple platform to simplify any blog management.
 ![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
 ### Users page
 ![Alt text](https://i.ibb.co/pr0mkHy/3.jpg)
-![Alt text](https://i.ibb.co/pr0mkHy/4.jpg)
-![Alt text](https://i.ibb.co/pr0mkHy/5.jpg)
-![Alt text](https://i.ibb.co/pr0mkHy/6.jpg)
+![Alt text](https://i.ibb.co/t4VHcQg/4.jpg)
+![Alt text](https://i.ibb.co/4T0z7d7/5.jpg)
+![Alt text](https://i.ibb.co/0qtFfzq/6.jpg)
 ### Posts page
-![Alt text](https://i.ibb.co/pr0mkHy/7.jpg)
+![Alt text](https://i.ibb.co/CJSYGGD/7.jpg)
 
 
 
 ## Notice
 This is the first version of this project, expects new versions in the future, such as authentification with JWT Strategy & middlewares & contact too. 
+
+Made by CHARAFI Oussama - 2018
